@@ -1,9 +1,15 @@
 #include<stdio.h>
 int main()
-{
-int rahim;
-printf("Enter your Number: ");
-scanf("%d",&rahim);
-printf("%d",rahim);
-    return 0;
+{/*
+    int money;
+    printf("Enter Your Money here: ");
+    scanf("%d",&money);
+    printf("Your Money is: %d",money);
+   
+    */
+int age;
+printf("Enter your age: ");
+scanf("%d",&age);
+printf("Your age is: %d",age);
+ return 0;
 }

@@ -1,0 +1,1 @@
+{"name":"Local: counting_arr","url":"d:\\CS\\computer-science-fundamentals\\C Programming\\m_11_stringopration\\counting_arr.c","tests":[{"id":1682563042894,"input":"5\n0 0 1 1 2","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CS\\computer-science-fundamentals\\C Programming\\m_11_stringopration\\counting_arr.c","group":"local","local":true}

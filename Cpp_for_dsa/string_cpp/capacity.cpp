@@ -2,9 +2,10 @@
 using namespace std;
 int main()
 {
-  string s="asibul alam";
-  s.resize(15,'x');
-  cout<<s<<endl;
+  string s="asibul";
+  // s="asibul alam saiful alam sakib al hasan";
+s.resize(10,'x');
+cout<<s<<endl;
 
     return 0;
 }

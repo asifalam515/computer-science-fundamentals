@@ -3,8 +3,10 @@ using namespace std;
 int main()
 {
   string s="asibul alam";
-  cout<<s.back()<<endl;
-  cout<<s.front()<<endl;
+  for(auto it=s.begin();it<s.end();it++)
+  {
+    cout<<*it<<endl;
+  }
 
     return 0;
 }

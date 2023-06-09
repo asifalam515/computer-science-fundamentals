@@ -1,6 +1,7 @@
 {
     "cph.general.onceMaintainerMessage": false,
     "files.associations": {
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp"
     }
 }

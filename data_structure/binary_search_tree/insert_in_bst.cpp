@@ -93,25 +93,49 @@ void level_of_order(Node *root)
     
   }
 }
-bool search(Node *root,int x)
+void insert(Node *&root,int x)
 {
-  if(root==NULL)return false;
-  if(root->value ==  x)return true;
-  if(root->value  >x )
-  {
-    return search(root->left,x);
-  }
-  else
-  {
-    return search(root->right,x);
-  }
+    if(root==NULL)
+    {
+        root=new Node(x);
+        return;
+    }
+    if(root->value >x)
+    {
+        // bame jaabe
+        if(root->left ==  NULL)
+        {
+            root->left=new Node(x);
+        }
+        else{
+            insert(root->left,x);
+        }
+
+    }
+    // boro hole
+    else
+    {
+        if(root->right ==NULL)
+        {
+            root->right=new Node(x);
+        }
+        else 
+        {
+            insert(root->right,x);
+        }
+    }
 }
+
 int main()
 {
-  
-Node *root=input();
-if(search(root,100)) cout<<"YES,found"<<endl;
-else cout<<"Not found"<<endl;
-level_of_order(root);
+  Node *root=input();
+
+  insert(root,13);
+  insert(root,32);
+  insert(root,27);
+  insert(root,22);
+  level_of_order(root);
+    
+
     return 0;
 }

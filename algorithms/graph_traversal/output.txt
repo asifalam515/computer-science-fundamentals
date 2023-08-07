@@ -1,0 +1,21 @@
+Visiting Node: 1
+Visiting Node: 2
+Visiting Node: 4
+Visiting Node: 7
+Visiting Node: 8
+Visiting Node: 3
+Visiting Node: 5
+Visiting Node: 6
+Visiting Node: 9
+Visiting Node: 10
+Visting Array
+Node 1status: 1
+Node 2status: 1
+Node 3status: 1
+Node 4status: 1
+Node 5status: 1
+Node 6status: 1
+Node 7status: 1
+Node 8status: 1
+Node 9status: 1
+Node 10status: 1

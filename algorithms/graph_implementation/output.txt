@@ -1,8 +1,1 @@
-1 2 5 6 3 4 8 7 Height  of 1 is :4
-Height  of 2 is :1
-Height  of 3 is :3
-Height  of 4 is :2
-Height  of 5 is :0
-Height  of 6 is :0
-Height  of 7 is :0
-Height  of 8 is :1
+cycle detected

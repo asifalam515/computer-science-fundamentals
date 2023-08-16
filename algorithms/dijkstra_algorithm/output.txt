@@ -1,7 +1,7 @@
-Distance of node 1; 0
-Distance of node 2; 3
-Distance of node 3; 5
-Distance of node 4; 6
-Distance of node 5; 8
-Distance of node 6; 7
-Distance of node 7; 10
+Shortest Distance of 1 is: 0
+Shortest Distance of 2 is: 3
+Shortest Distance of 3 is: 5
+Shortest Distance of 4 is: 6
+Shortest Distance of 5 is: 8
+Shortest Distance of 6 is: 7
+Shortest Distance of 7 is: 10

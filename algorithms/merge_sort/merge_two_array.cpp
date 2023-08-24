@@ -39,15 +39,19 @@ void mergeSortedArrays(int arr1[],int arr2[],int size1,int size2,int mergedArr[]
 
 int main()
 {
-  int arr1[]={1,3,5,7,9};
+  int arr1[]={8, 6,4, 2};
   int size1=sizeof(arr1)/sizeof(arr1[0]);
 
-  int arr2[]={2,4,6,8,10};
+  int arr2[]={7 ,5 ,3, 1};
   int size2=sizeof(arr2)/sizeof(arr2[0]);
 
   int mergedSize=size1+size2;
-  int mergedArr[mergedSize];
+  int mergedArr[mergedSize]; 
 mergeSortedArrays(arr1,arr2,size1,size2,mergedArr);
+for(int i=0;i<mergedSize;i++)
+{
+    cout<<mergedArr[i]<<" ";
+}
 
     return 0;
 }

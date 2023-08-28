@@ -1,0 +1,4 @@
+Node 1 distance 0
+Node 2 distance 5
+Node 3 distance 10
+Node 4 distance 8

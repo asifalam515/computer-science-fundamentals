@@ -1,0 +1,7 @@
+# highest=max(23,345,123,231)
+highest_elemnet=max([23,2,2,5,46,2,3])
+smallest=min([23,45,1,7,2,5623])
+count=len([34,2,12,7,28,1])
+total=sum([23,2,3,4,3,256])
+print(total)
+# print(count)

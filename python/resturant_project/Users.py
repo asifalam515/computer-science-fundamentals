@@ -10,6 +10,7 @@ class User(ABC):
 class Customer(User):
     def __init__(self, name,money,phone,email,address) -> None:
         self.wallet=money
+        self.bill_due=0
         self.__order=None
         super().__init__(name,phone,email,address)
         
@@ -23,7 +24,8 @@ class Customer(User):
         
     def place_order(self,order):
         self.order=order
-        print(f'{self.name} placed an order {order.items}')
+        self.due_amount+=order.bill
+        print(f'{self.name} placed an order with bill {order.bill}')
     
     def eat_food(self,order):
         print(f'{self.name} eating food {order.food}')

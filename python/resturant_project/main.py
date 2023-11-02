@@ -1,6 +1,8 @@
 from Menu import Pizza,Burger,Menu,Drinks
 from Resturant import Resturant
 from Users import Chef,Customer,Server,Manager
+from Order import Order
+
 def main():
     menu=Menu()
     pizza_1=Pizza("shutki pizza", 600,"large",['shutki','onion'])
@@ -24,7 +26,7 @@ def main():
     menu.add_menu_item('drinks',coffe)
     
 # show menu
-    menu.show_menu()
+    # menu.show_menu()
     
     resturant=Resturant('Sai Baba Resturant',2000,menu)
     
@@ -39,8 +41,36 @@ def main():
     resturant.add_employee('server',server)
     
     # show employees
-    resturant.show_employees()
+    # resturant.show_employees()
     
+    # customer 1 placing an order
+    customer_1=Customer('sakib khan',5,'asif@gmail.com','banani',10000)
+    order_1=Order(customer_1,[pizza_3,coffe])
+    customer_1.pay_for_order(order_1)
+    resturant.add_order(order_1)
+    
+    # customer one paying for order 1
+    resturant.receive_payment(order_1,2000,customer_1)
+    
+    print('revenue and balance after first customer ',resturant.revenue,resturant.balance)
+    
+    # customer 2 placing an order
+    customer_2=Customer('arifin shuvo',15,'arif@gmail.com','uganda',10000)
+    order_2=Order(customer_2,[pizza_1,burger_2,burger_1,pizza_2,coffe])
+    customer_2.pay_for_order(order_2)
+    resturant.add_order(order_2)
+    
+    # customer one paying for order 1
+    resturant.receive_payment(order_2,15000,customer_2)
+    
+    print('revenue and balance after second customer ',resturant.revenue,resturant.balance)
+    
+    # pay rent
+    resturant.pay_expense(resturant.rent,'Rent')
+    print('After rent ',resturant.revenue,resturant.balance, resturant.expanse)
+    
+    resturant.pay_salary(chef)
+    print('After salary ',resturant.revenue,resturant.balance, resturant.expanse)
     
 # call the main method
 if __name__=='__main__':

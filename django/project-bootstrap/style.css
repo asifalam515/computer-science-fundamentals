@@ -1,0 +1,7 @@
+.menu-container li{
+    list-style-type: none;
+}
+.title{
+    color: cyan;
+    font-size: 68px;
+}

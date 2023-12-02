@@ -9,5 +9,20 @@
     <h1>This is home page</h1>
     <h2>Author:{{author}}</h2>
     <h2>Age:{{age}}</h2>
+    {% if age >= 20 %}
+    <h3>You will get Driving license</h3>
+    
+    {% endif %}
+
+    {{lst}}
+    <h1>{{lst | join:" - "}} </h1>
+    <h1> {{ birthday | date:"D d M Y" }}</h1>
+    <h1> {{val | length}} </h1>
+    <h1> {{'Happy coding.Pytonn is fun.' | truncatechars:6}} </h1>
+  <h1> {{"Python is Fun" | cut:" "}} </h1>
+    <!-- for loop -->
+    {% for i in courses %}
+    <h3> {{i.id}} {{i.name}} {{i.fee}} </h3>
+    {% endfor %}
 </body>
 </html>

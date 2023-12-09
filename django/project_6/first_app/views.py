@@ -35,3 +35,7 @@ def index(request):
   }]
     
     return render(request,'first_app/index.html',{'data':data})
+  
+def about(request):
+  print(request.GET)
+  return render(request,'first_app/index.html',{'id':request.GET})

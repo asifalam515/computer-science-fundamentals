@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+{% comment %} card will be there {% endcomment %}
+{% for meal in  data%}
+<div class="container col-4 p-2">
+    <div class="card"  style="width: 18rem;">
+        <img src="{{meal.strMealThumb}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> {{meal.strMeal}} </h5>
+          {% comment %} <p class="card-text"> {{meal.idMeal}} </p> {% endcomment %}
+          <button class="btn btn-primary">Order Now</button>
+        </div>
+      </div>
+</div>
+{% endfor %}
+{% endblock  %}

@@ -9,5 +9,21 @@
    <h1>JOIN:{{ txt | join:" - " }}  </h1>
    <h2>Date: {{ date | date:"D d M Y" }}</h2>
    <h1>ShortDate:{{ date|date:"SHORT_DATE_FORMAT" }}</h1>
+  <h1>ADD:{{ age| add:"5" }}</h1>
+  <h2>Capfirst:{{ framework| capfirst }}</h2>
+  <h2>Cut filter:{{ name | cut:" " }}</h2>
+  <h2>Dictsort filter: {{ dictsort | dictsort:"name" }}</h2>
+  <h3>Escape: {{ '<p>You are <em>pretty</em> smart!</p> '| escape }}</h3>
+  <h3>First friend:{{ friends| first }}</h3>
+  <h3>Last friend:{{ friends| last }}</h3>
+  <h2>length : {{ friends| length }}</h2>
+  <h3>LineNumbers Filter: {{txt | linenumbers }}</h3>
+  <h2>Lower: {{ name| lower }}</h2>
+  <h3>Upper: {{ name| upper }}</h3>
+  <h3>Tittle: {{ name| title }}</h3>
+  <h3>Random :{{ friends| random }} </h3>
+  <h3>Slice: {{ friends| slice:":2" }}</h3>
+  <h4>Time filter: {{ date| time:"H:i" }}</h4>
+  <h3> {{lstr| truncatechars:10}} </h3>
 </body>
 </html>

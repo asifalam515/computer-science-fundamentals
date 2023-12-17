@@ -18,6 +18,7 @@
         <th scope="col">Name</th>
         <th scope="col">Address</th>
         <th scope="col">Fathers Name</th>
+        <th scope='col'>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -27,6 +28,7 @@
     <td> {{st.name}} </td>
     <td> {{st.address}} </td>
     <td>{{st.father_name}}</td>
+    <td> <a class='btn btn-danger text-white' href=" {% url 'delete_student' st.roll %}">Delete</a> </td>
   </tr>
 
 {% endfor %} 

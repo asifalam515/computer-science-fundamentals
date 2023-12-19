@@ -22,7 +22,7 @@
 {% comment %} model data  will be shown here {% endcomment %}
 <hr>
     <div class='w-75 m-auto'>
-        <hr>
+      <hr>
         <h1>Employee Table Create By Models</h1>
         <table class="table">
             <thead>
@@ -30,12 +30,14 @@
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Address</th>
+                <th scope="col">Eamil</th>
               </tr>
               {% for person in employee  %}
               <tr>
                 <th scope="row"> {{person.id}} </th>
                 <td>{{person.name}} </td>
                 <td>{{person.address}} </td>
+                <td>{{person.message}} </td>
               </tr>
               {% endfor %}
             </thead>

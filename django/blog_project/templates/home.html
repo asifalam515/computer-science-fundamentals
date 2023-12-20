@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="d-flex flex-wrap justify-content-center px-5 mt-5">
+   {% for post in data %}
+   <div class="col-sm-3 mb-3 mb-sm-0 mx-2">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"> {{post.tittle}} </h5>
+         <p class="card-text">{{post.content}}</p>
+        <p>Author: {{post.author.name}} </p>
+        <p>Category:
+        {% for singleCategory in post.category.all %}
+      <button class='btn btn-warning m-2' disabled>  {{ singleCategory }}</button>
+        
+        {% endfor %}    
+        
+        </p>
+        {% comment %} <a href="#" class="btn btn-primary">  </a> {% endcomment %}
+      </div>
+    </div>
+  </div>
+   {% endfor %}
+      
+  </div>
+
+{% endblock content %}

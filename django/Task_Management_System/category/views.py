@@ -7,7 +7,7 @@ def addCategory(request):
         categoryForm=forms.CategoryForm(request.POST)
         if categoryForm.is_valid():
             categoryForm.save()
-            print()
+            # print()
             return redirect('home')
            
             

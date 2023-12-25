@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<form action=" " method='post' novalidate  style="width: 50%;margin:auto">
+    <h1>Log in Page</h1>
+    {% csrf_token %}
+    {% if  form.non_field_errors %}
+    {% for er in form.non_field_errors %}
+    <p class='bg-danger text-white p-4'> {{er}} </p>
+    {% endfor %}
+    {% endif %}
+
+    {% comment %} {{form | crispy}} {% endcomment %}
+    {% for fm in form  %}
+    {{fm.label_tag}}
+    {{fm  }}
+    {{fm.errors | striptags}}
+    <br>
+    <br>
+    
+    {% endfor %}
+    
+
+    <br>
+    <button class='btn btn-primary' >Log In</button>
+    </form>
+{% endblock content %}

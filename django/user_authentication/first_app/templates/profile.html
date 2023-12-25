@@ -1,0 +1,39 @@
+ {% extends "base.html" %}
+ {% block content %}
+ <h1>Welcome to Profile</h1>
+ <h1>Hello  {{user}} </h1>
+ {% if message %}
+ {% for m in  message %}
+ <p class='bg-success p-3 text-white'> {{m}} </p>
+ 
+ {% endfor %}
+ 
+ {% endif %}
+<br>
+ <a class='btn btn-info' href=" {% url 'pass_change' %}">Change Your Password Here </a> 
+ <a class='btn btn-warning' href=" {% url 'pass_change2' %}">Change Your Password Without Old Password</a> 
+
+ <form action=" " method='post' novalidate  style="width: 50%;margin:auto">
+    <h1>Log in Page</h1>
+    {% csrf_token %}
+    {% if  form.non_field_errors %}
+    {% for er in form.non_field_errors %}
+    <p class='bg-danger text-white p-4'> {{er}} </p>
+    {% endfor %}
+    {% endif %}
+
+    {% comment %} {{form | crispy}} {% endcomment %}
+    {% for fm in form  %}
+    {{fm.label_tag}}
+    {{fm  }}
+    {{fm.errors | striptags}}
+    <br>
+    <br>
+    
+    {% endfor %}
+    
+
+    <br>
+    <button class='btn btn-primary' >Change Data</button>
+    </form>
+ {% endblock content %}

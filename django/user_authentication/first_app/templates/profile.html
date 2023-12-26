@@ -2,13 +2,19 @@
  {% block content %}
  <h1>Welcome to Profile</h1>
  <h1>Hello  {{user}} </h1>
- {% if message %}
- {% for m in  message %}
- <p class='bg-success p-3 text-white'> {{m}} </p>
+ {% if messages %}
+ {% for m in  messages %}
+ <div class="alert bg-warning mx-auto" role="alert" style="width:50%;">
+     <button type="button" class="border border-warning rounded btn-close btn-close-dark  m-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+     <span class="text-center:"> {{m}} </span>
+ 
+ </div>
  
  {% endfor %}
  
- {% endif %}
+ {% endif %} 
+ 
+ 
 <br>
  <a class='btn btn-info' href=" {% url 'pass_change' %}">Change Your Password Here </a> 
  <a class='btn btn-warning' href=" {% url 'pass_change2' %}">Change Your Password Without Old Password</a> 

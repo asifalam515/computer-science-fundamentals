@@ -2,6 +2,18 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+{% if messages %}
+{% for m in  messages %}
+<div class="alert bg-warning mx-auto" role="alert" style="width:50%;">
+    <button type="button" class="border border-warning rounded btn-close btn-close-dark  m-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+    <span class="text-center:"> {{m}} </span>
+
+</div>
+
+{% endfor %}
+
+{% endif %}
+
 <form action=" " method='post' novalidate  style="width: 50%;margin:auto">
     <h1>Log in Page</h1>
     {% csrf_token %}

@@ -40,6 +40,7 @@ def log_in(request):
             form=AuthenticationForm()
         return render(request,'log_in.html',{'form':form})   
     else:
+        messages.success(request,"Already Signed In")
         return redirect('profile')
     
 def profile(request):

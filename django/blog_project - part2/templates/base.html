@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href=" {% url 'hompage' %} ">Home</a>
+              </li>
+              {% comment %} <li class="nav-item">
+                <a class="nav-link" href=" {% url 'register' %} ">Register</a>
+              </li> {% endcomment %}
+              <li class="nav-item">
+                <a class="nav-link" href=" {% url 'add_category' %} ">Add Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=" {% url 'add_post' %} ">Add Post</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="  ">Add Profile</a>
+              </li>
+              
+            </ul>
+
+            <div class="d-flex">
+   
+              
+              {% if request.user.is_authenticated %} 
+              <a class="nav-link m-2 text-dark"  href=" {% url 'profile' %} "><button class="btn btn-primary" >Profile</button></a>
+              <a class="nav-link m-2 text-dark"  href=" {% url 'add_post' %} "><button class="btn btn-primary" >Add Post</button></a>
+              
+              {% else %}
+              <a class="nav-link m-2 text-dark"  href=" {% url 'register' %} "><button class="btn btn-primary" >Register</button></a>
+              <a class="nav-link m-2" href="{% url 'user_login' %}  "><button class="btn btn-warning" >Log In</button></a>
+              {% endif %}
+                
+                
+              
+
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {% for i in messages %}
+      <div class="alert" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="alert-header">
+         
+          <strong class="mr-auto">Message</strong>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="alert-body">
+          <h3 class="text-{{i.tags}}" > {{i}} </h3>
+        </div>
+      </div>
+      {% endfor %}
+
+      {% block content %}
+      
+      {% endblock content %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<!-- musician_confirm_delete.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Confirm Delete</h2>
+    <p>Are you sure you want to delete the musician {{ object }}?</p>
+
+    <form method="post" action="{% url 'delete_musician' pk=object.pk %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirm Delete</button>
+    </form>
+{% endblock %}
